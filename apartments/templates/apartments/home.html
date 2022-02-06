@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+
+
+
+{% block content %}
+
+{#{{ form|crispy }}#}
+
+    {% for apartment in data %}
+
+    <ul>
+        <li>Name: {{ apartment.name }}</li>
+    </ul>
+
+
+    <a href="{% url 'datail-view' apartment.id %}"><button class="btn btn-primary" type="button">See</button></a>
+    {% if apartment.sale %}
+        For sale
+
+    {% elif apartment.rent %}
+        For rent
+
+    {% endif %}
+<hr>
+
+{% endfor %}
+
+{% endblock content %}

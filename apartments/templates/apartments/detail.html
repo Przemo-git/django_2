@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load colorize %}
+
+{% block content %}
+
+
+    <ul>
+        <li>Name: {{ data.name }}</li>
+        <li>Price: {{ data.price|colorize }} zł</li>
+        <li>Sale: {{ data.sale}} </li>
+        <li>Rent: {{ data.rent}} </li>
+        <li>Description: {{ data.description|linebreaks }}</li>
+        <li>www: {{ data.address }}</li>
+        <li>Offer created: {{ data.date }}</li>
+    </ul>
+
+
+{% endblock content %}
