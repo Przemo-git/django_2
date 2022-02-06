@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load colorize %}
 
 
 
@@ -11,6 +12,7 @@
 
     <ul>
         <li>Name: {{ apartment.name }}</li>
+        <li>Name: {{ apartment.price|colorize }}</li>
     </ul>
 
 
