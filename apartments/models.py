@@ -20,7 +20,7 @@ class Apartment(models.Model):
 
 
 class Owner(models.Model):
-    name = models.ForeignKey(Apartment, on_delete=models.CASCADE)
+    name = models.ManyToManyField(Apartment)
     owner = models.CharField(max_length=200)
     workers = models.PositiveIntegerField()
     workers_number = models.PositiveIntegerField(blank=True)
