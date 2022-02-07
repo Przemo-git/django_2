@@ -31,5 +31,5 @@ class Owner(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'owner {self.owner} number of workers {self.workers_number}'
+        return f'Owner: {self.owner} / Number of workers: {self.workers_number}'
 
