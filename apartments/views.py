@@ -14,12 +14,15 @@ def home_view(request):
 
 def detail_view(request, id):
     data = None
-    data2 = None
+    data2 = ''
     try:
         data = Apartment.objects.get(id=id)
-        data2 = Owner.objects.get(id=id)
+        data2 = Owner.objects.get(name=id)
+
     except:
         pass
+
+    print(data2)
 
     return render(request, 'apartments/detail.html', {
         'data': data,
