@@ -11,7 +11,7 @@ class Apartment(models.Model):
     rent = models.BooleanField()
     price = models.PositiveIntegerField()
     description = models.TextField()
-    address = models.EmailField()
+    address = models.URLField()
     activated = models.BooleanField(default=False)
     date = models.DateTimeField(auto_now_add=True)
 
