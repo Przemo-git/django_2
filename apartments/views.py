@@ -4,7 +4,7 @@ from apartments.models import Apartment, Owner
 
 def home_view(request):
 
-    data = Apartment.objects.filter(activated=True)
+    data = Apartment.objects.filter(activated=True).order_by('-date')
 
 
     return render(request, 'apartments/home.html', {
@@ -28,5 +28,3 @@ def detail_view(request, id):
         'data': data,
         'data2': data2
     })
-
-
